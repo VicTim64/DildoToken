@@ -1,0 +1,1 @@
+export default function Memes() { return <section>Memes</section>; }
