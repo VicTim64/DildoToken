@@ -1,0 +1,14 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Press Start 2P', monospace;
+  background-color: #013220;
+  color: white;
+  overflow-x: hidden;
+}
