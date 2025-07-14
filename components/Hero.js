@@ -20,7 +20,7 @@ export default function Hero() {
         alt="Symbol Overlay"
         width={240}
         height={240}
-        className="absolute top-[120px] right-[40px] z-20 opacity-100 brightness-[2.6]"
+        className="absolute top-[120px] right-[40px] z-20 opacity-100 brightness-[2.6] hidden md:block"
       />
 
       {/* Corner icon */}
@@ -46,33 +46,32 @@ export default function Hero() {
       </div>
 
       {/* Central image with frame */}
-      <div className="absolute top-[280px] left-1/2 transform -translate-x-1/2 z-40">
+      <div className="absolute top-[280px] left-1/2 transform -translate-x-1/2 z-40 w-[90%] md:w-auto">
         <div className="border-[6px] border-[#00FF00]">
           <Image
             src="/assets/asset_7.png"
             alt="Central Image"
             width={880}
             height={520}
+            className="w-full h-auto"
           />
         </div>
       </div>
 
-      {/* Left dildo - under central image */}
+      {/* Dildos responsive */}
       <Image
         src="/assets/asset_8.png"
         alt="Left Dildo"
         width={288}
         height={552}
-        className="absolute bottom-[80px] left-[calc(50%-550px)] z-30"
+        className="absolute bottom-[80px] md:left-[calc(50%-550px)] left-[10px] z-30 w-[25vw] md:w-[288px]"
       />
-
-      {/* Right dildo - over central image */}
       <Image
         src="/assets/asset_9.png"
         alt="Right Dildo"
         width={288}
         height={552}
-        className="absolute bottom-[80px] right-[calc(50%-550px)] z-50"
+        className="absolute bottom-[80px] md:right-[calc(50%-550px)] right-[10px] z-50 w-[25vw] md:w-[288px]"
       />
     </section>
   );
