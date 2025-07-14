@@ -45,22 +45,6 @@ export default function Hero() {
         <Image src="/assets/asset_6.png" alt="Dildo Shop" width={160} height={44} />
       </div>
 
-      {/* Characters left & right resized */}
-      <Image
-        src="/assets/asset_8.png"
-        alt="Left Dildo"
-        width={200}
-        height={400}
-        className="absolute bottom-[60px] left-[-20px] z-20"
-      />
-      <Image
-        src="/assets/asset_9.png"
-        alt="Right Dildo"
-        width={200}
-        height={400}
-        className="absolute bottom-[60px] right-[-10px] z-50"
-      />
-
       {/* Center image in bordered frame - larger */}
       <div className="absolute top-[280px] left-1/2 transform -translate-x-1/2 z-40">
         <div className="border-[6px] border-[#00FF00]">
@@ -72,6 +56,22 @@ export default function Hero() {
           />
         </div>
       </div>
+
+      {/* Characters left & right adjusted for layout */}
+      <Image
+        src="/assets/asset_8.png"
+        alt="Left Dildo"
+        width={240}
+        height={460}
+        className="absolute bottom-[60px] left-[100px] z-30"
+      />
+      <Image
+        src="/assets/asset_9.png"
+        alt="Right Dildo"
+        width={240}
+        height={460}
+        className="absolute bottom-[60px] right-[60px] z-50"
+      />
     </section>
   );
 }
