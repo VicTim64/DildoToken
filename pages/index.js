@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+import Hero from "..@/components/Hero";
 // import GoGreen from "@/components/GoGreen";
 // import NFTSection from "@/components/NFTSection";
 // import Store from "@/components/Store";
