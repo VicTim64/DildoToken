@@ -1,0 +1,1 @@
+export default function GoGreen() { return <section>Go Green</section>; }

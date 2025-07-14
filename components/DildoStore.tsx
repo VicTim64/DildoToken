@@ -1,0 +1,1 @@
+export default function DildoStore() { return <section>Dildo Store</section>; }
