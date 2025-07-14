@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative w-full min-h-screen bg-[#021a0f] overflow-hidden px-4 pb-12">
-      {/* Responsive scale wrapper */}
-      <div className="origin-top-left scale-[0.6] md:scale-100 md:origin-center mx-auto w-[1440px] max-w-full relative">
+      {/* MOBILE SCALE WRAPPER */}
+      <div className="scale-[0.45] origin-top-left md:scale-100 md:origin-center min-w-[1440px]">
         {/* Background pixel grid */}
         <div className="absolute top-[220px] left-1/2 transform -translate-x-1/2 w-full max-w-[1440px] h-[500px] z-10">
           <Image
