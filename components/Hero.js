@@ -1,131 +1,121 @@
-"use client";
-import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function Hero() {
-  const [scale, setScale] = useState(1);
-
-  useEffect(() => {
-    function handleResize() {
-      const w = window.innerWidth;
-      if (w < 768) {
-        setScale(w / 1440); // scalare proporțională pt mobil
-      } else {
-        setScale(1); // full scale pe desktop
-      }
-    }
-
-    handleResize(); // run initial
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <section className="relative w-full min-h-screen bg-[#021a0f] overflow-hidden px-4 pb-12">
-      <div
-        className="origin-top mx-auto"
-        style={{
-          transform: `scale(${scale})`,
-          transformOrigin: "top center",
-          width: "1440px",
-        }}
-      >
-        {/* Background pixel grid */}
-        <div className="absolute top-[220px] left-1/2 transform -translate-x-1/2 w-full max-w-[1440px] h-[500px] z-10">
-          <Image
-            src="/assets/asset_1.png"
-            alt="Green Background"
-            fill
-            className="object-contain"
-            priority
-          />
-        </div>
-
-        {/* Symbol background overlay */}
+      {/* Background pixel grid */}
+      <div className="absolute top-[220px] left-1/2 transform -translate-x-1/2 w-full max-w-[1440px] h-[500px] z-10">
         <Image
-          src="/assets/asset_10.png"
-          alt="Symbol Overlay"
-          width={240}
-          height={240}
-          className="absolute top-[120px] right-[40px] z-20 opacity-100 brightness-[2.6]"
+          src="/assets/asset_1.png"
+          alt="Green Background"
+          fill
+          className="object-contain"
+          priority
         />
+      </div>
 
-        {/* Corner icon */}
+      {/* Symbol background overlay */}
+      <Image
+        src="/assets/asset_10.png"
+        alt="Symbol Overlay"
+        width={240}
+        height={240}
+        className="absolute top-[120px] right-[40px] z-20 opacity-100 brightness-[2.6] hidden md:block"
+      />
+
+      {/* Corner icon */}
+      <Image
+        src="/assets/asset_11.png"
+        alt="Corner Logo"
+        width={48}
+        height={48}
+        className="absolute top-5 left-5 z-50"
+      />
+
+      {/* Logo */}
+      <div className="absolute top-[30px] left-1/2 transform -translate-x-1/2 z-40">
         <Image
-          src="/assets/asset_11.png"
-          alt="Corner Logo"
-          width={48}
-          height={48}
-          className="absolute top-5 left-5 z-50"
+          src="/assets/asset_2.png"
+          alt="Logo"
+          width={300}
+          height={90}
         />
+      </div>
 
-        {/* Logo */}
-        <div className="absolute top-[30px] left-1/2 transform -translate-x-1/2 z-40">
+      {/* Navigation buttons */}
+      <div className="absolute top-[170px] left-1/2 transform -translate-x-1/2 z-40 flex flex-wrap justify-center gap-4 max-w-[95vw]">
+        <Image
+          src="/assets/asset_3.png"
+          alt="Buy $DILDO"
+          width={160}
+          height={44}
+        />
+        <Image
+          src="/assets/asset_4.png"
+          alt="Community"
+          width={160}
+          height={44}
+        />
+        <Image
+          src="/assets/asset_5.png"
+          alt="NFT"
+          width={160}
+          height={44}
+        />
+        <Image
+          src="/assets/asset_6.png"
+          alt="Dildo Shop"
+          width={160}
+          height={44}
+        />
+      </div>
+
+      {/* Central image with frame */}
+      <div className="absolute top-[280px] left-1/2 transform -translate-x-1/2 z-40">
+        <div className="border-[6px] border-[#00FF00] w-[90vw] max-w-[880px]">
           <Image
-            src="/assets/asset_2.png"
-            alt="Logo"
-            width={300}
-            height={90}
+            src="/assets/asset_7.png"
+            alt="Central Image"
+            width={880}
+            height={520}
+            className="w-full h-auto"
           />
         </div>
+      </div>
 
-        {/* Navigation buttons */}
-        <div className="absolute top-[170px] left-1/2 transform -translate-x-1/2 z-40 flex flex-wrap justify-center gap-4">
-          <Image
-            src="/assets/asset_3.png"
-            alt="Buy $DILDO"
-            width={160}
-            height={44}
-          />
-          <Image
-            src="/assets/asset_4.png"
-            alt="Community"
-            width={160}
-            height={44}
-          />
-          <Image
-            src="/assets/asset_5.png"
-            alt="NFT"
-            width={160}
-            height={44}
-          />
-          <Image
-            src="/assets/asset_6.png"
-            alt="Dildo Shop"
-            width={160}
-            height={44}
-          />
-        </div>
-
-        {/* Central image with frame */}
-        <div className="absolute top-[280px] left-1/2 transform -translate-x-1/2 z-40">
-          <div className="border-[6px] border-[#00FF00]">
-            <Image
-              src="/assets/asset_7.png"
-              alt="Central Image"
-              width={880}
-              height={520}
-            />
-          </div>
-        </div>
-
-        {/* Left dildo - under central image */}
+      {/* Left dildo - under central image */}
+      <div className="absolute bottom-[80px] left-[calc(50%-550px)] z-30 hidden md:block">
         <Image
           src="/assets/asset_8.png"
           alt="Left Dildo"
           width={288}
           height={552}
-          className="absolute bottom-[80px] left-[calc(50%-550px)] z-30"
         />
+      </div>
 
-        {/* Right dildo - over central image */}
+      {/* Right dildo - over central image */}
+      <div className="absolute bottom-[80px] right-[calc(50%-550px)] z-50 hidden md:block">
         <Image
           src="/assets/asset_9.png"
           alt="Right Dildo"
           width={288}
           height={552}
-          className="absolute bottom-[80px] right-[calc(50%-550px)] z-50"
+        />
+      </div>
+
+      {/* Mobile dildos */}
+      <div className="flex md:hidden justify-between absolute bottom-4 w-full px-4 z-40">
+        <Image
+          src="/assets/asset_8.png"
+          alt="Left Dildo"
+          width={80}
+          height={160}
+        />
+        <Image
+          src="/assets/asset_9.png"
+          alt="Right Dildo"
+          width={80}
+          height={160}
         />
       </div>
     </section>
