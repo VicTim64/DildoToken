@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[700px] md:h-[750px] overflow-hidden bg-black">
+    <section className="relative w-full h-[700px] md:h-[750px] overflow-hidden bg-[#011d11]">
       {/* Asset 1: Green pixelated background (centered stripe) */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[55%] w-full max-w-[1400px] h-[480px] z-0">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[55%] w-full max-w-[1400px] h-[520px] z-0">
         <Image
           src="/assets/asset_1.png"
           alt="Green Background"
@@ -27,18 +27,18 @@ export default function Hero() {
       <Image
         src="/assets/asset_8.png"
         alt="Left Dildo"
-        width={180}
-        height={380}
-        className="absolute top-[50%] left-0 -translate-y-1/2 z-20"
+        width={240}
+        height={450}
+        className="absolute top-[54%] left-[-40px] -translate-y-1/2 z-20"
       />
 
       {/* Asset 9: Right green dildo with cigar and glasses */}
       <Image
         src="/assets/asset_9.png"
         alt="Right Dildo"
-        width={230}
-        height={420}
-        className="absolute top-[50%] right-0 -translate-y-1/2 z-20"
+        width={270}
+        height={500}
+        className="absolute top-[54%] right-[-40px] -translate-y-1/2 z-20"
       />
 
       {/* Asset 7: Central grayscale image */}
@@ -57,17 +57,17 @@ export default function Hero() {
         <Image
           src="/assets/asset_2.png"
           alt="Logo"
-          width={300}
-          height={80}
+          width={360}
+          height={90}
         />
       </div>
 
       {/* Asset 3–6: Buttons */}
-      <div className="absolute top-24 left-1/2 transform -translate-x-1/2 z-40 flex gap-3">
-        <Image src="/assets/asset_3.png" alt="Buy $DILDO" width={140} height={40} />
-        <Image src="/assets/asset_4.png" alt="Community" width={140} height={40} />
-        <Image src="/assets/asset_5.png" alt="NFT" width={140} height={40} />
-        <Image src="/assets/asset_6.png" alt="Dildo Shop" width={140} height={40} />
+      <div className="absolute top-28 left-1/2 transform -translate-x-1/2 z-40 flex gap-4">
+        <Image src="/assets/asset_3.png" alt="Buy $DILDO" width={160} height={46} />
+        <Image src="/assets/asset_4.png" alt="Community" width={160} height={46} />
+        <Image src="/assets/asset_5.png" alt="NFT" width={160} height={46} />
+        <Image src="/assets/asset_6.png" alt="Dildo Shop" width={160} height={46} />
       </div>
 
       {/* Asset 11: Logo top-left */}
