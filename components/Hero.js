@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="relative w-full min-h-screen bg-[#021a0f] overflow-hidden px-4 pb-12">
       {/* Background pixel grid */}
-      <div className="absolute top-[15vh] left-1/2 transform -translate-x-1/2 w-full max-w-[1440px] h-[35vh] z-10">
+      <div className="absolute top-[220px] left-1/2 transform -translate-x-1/2 w-full max-w-[1440px] h-[500px] z-10">
         <Image
           src="/assets/asset_1.png"
           alt="Green Background"
@@ -14,13 +14,13 @@ export default function Hero() {
         />
       </div>
 
-      {/* Symbol background overlay */}
+      {/* Symbol background overlay (brighter & smaller) */}
       <Image
         src="/assets/asset_10.png"
         alt="Symbol Overlay"
         width={240}
         height={240}
-        className="absolute top-[8vh] right-[5vw] z-20 opacity-100 brightness-[2.6] hidden sm:block"
+        className="absolute top-[120px] right-[40px] z-20 opacity-100 brightness-[2.6]"
       />
 
       {/* Corner icon */}
@@ -33,39 +33,76 @@ export default function Hero() {
       />
 
       {/* Logo */}
-      <div className="absolute top-[3vh] left-1/2 transform -translate-x-1/2 z-40 w-[200px] sm:w-[300px]">
-        <Image src="/assets/asset_2.png" alt="Logo" width={300} height={90} />
+      <div className="absolute top-[30px] left-1/2 transform -translate-x-1/2 z-40">
+        <Image
+          src="/assets/asset_2.png"
+          alt="Logo"
+          width={300}
+          height={90}
+          className="w-[200px] sm:w-[300px] h-auto"
+        />
       </div>
 
       {/* Navigation buttons */}
-      <div className="absolute top-[13vh] left-1/2 transform -translate-x-1/2 z-40 flex gap-2 sm:gap-4 flex-wrap justify-center sm:flex-nowrap w-full max-w-[90vw] sm:max-w-none">
-        <Image src="/assets/asset_3.png" alt="Buy $DILDO" width={160} height={44} />
-        <Image src="/assets/asset_4.png" alt="Community" width={160} height={44} />
-        <Image src="/assets/asset_5.png" alt="NFT" width={160} height={44} />
-        <Image src="/assets/asset_6.png" alt="Dildo Shop" width={160} height={44} />
+      <div className="absolute top-[170px] left-1/2 transform -translate-x-1/2 z-40 flex flex-wrap justify-center gap-2 sm:gap-4">
+        <Image
+          src="/assets/asset_3.png"
+          alt="Buy $DILDO"
+          width={160}
+          height={44}
+          className="w-[120px] sm:w-[160px] h-auto"
+        />
+        <Image
+          src="/assets/asset_4.png"
+          alt="Community"
+          width={160}
+          height={44}
+          className="w-[120px] sm:w-[160px] h-auto"
+        />
+        <Image
+          src="/assets/asset_5.png"
+          alt="NFT"
+          width={160}
+          height={44}
+          className="w-[120px] sm:w-[160px] h-auto"
+        />
+        <Image
+          src="/assets/asset_6.png"
+          alt="Dildo Shop"
+          width={160}
+          height={44}
+          className="w-[120px] sm:w-[160px] h-auto"
+        />
       </div>
 
-      {/* Central image with frame */}
-      <div className="absolute top-[22vh] left-1/2 transform -translate-x-1/2 z-40 w-[90vw] sm:w-auto">
-        <div className="border-[4px] sm:border-[6px] border-[#00FF00]">
+      {/* Center image in bordered frame */}
+      <div className="absolute top-[280px] left-1/2 transform -translate-x-1/2 z-40 scale-[0.85] sm:scale-100">
+        <div className="border-[6px] border-[#00FF00]">
           <Image
             src="/assets/asset_7.png"
             alt="Central Image"
             width={880}
             height={520}
+            className="w-[320px] sm:w-[880px] h-auto"
           />
         </div>
       </div>
 
-      {/* Left dildo */}
-      <div className="absolute bottom-[4vh] left-[2vw] z-30 w-[90px] sm:w-[288px]">
-        <Image src="/assets/asset_8.png" alt="Left Dildo" width={288} height={552} />
-      </div>
-
-      {/* Right dildo */}
-      <div className="absolute bottom-[4vh] right-[2vw] z-50 w-[90px] sm:w-[288px]">
-        <Image src="/assets/asset_9.png" alt="Right Dildo" width={288} height={552} />
-      </div>
+      {/* Characters left & right adjusted for layout */}
+      <Image
+        src="/assets/asset_8.png"
+        alt="Left Dildo"
+        width={288}
+        height={552}
+        className="absolute bottom-[40px] left-[calc(50%-170px)] sm:bottom-[80px] sm:left-[calc(50%-550px)] z-30 w-[70px] sm:w-[288px] h-auto"
+      />
+      <Image
+        src="/assets/asset_9.png"
+        alt="Right Dildo"
+        width={288}
+        height={552}
+        className="absolute bottom-[40px] right-[calc(50%-170px)] sm:bottom-[80px] sm:right-[calc(50%-550px)] z-50 w-[70px] sm:w-[288px] h-auto"
+      />
     </section>
   );
 }
