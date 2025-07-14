@@ -1,1 +1,0 @@
-export default function GoGreen() { return <section className='p-4'>Go Green or Go Home</section>; }
