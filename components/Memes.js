@@ -1,1 +1,0 @@
-export default function Memes() { return <section className='p-4'>Community Memes</section>; }
