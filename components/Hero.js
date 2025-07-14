@@ -3,45 +3,10 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative w-full min-h-screen bg-[#021a0f] overflow-hidden px-4 pb-12">
-      {/* MOBILE fallback - scaled version of desktop layout */}
-      <div className="block md:hidden w-full overflow-hidden flex justify-center">
-        <div className="scale-[0.45] origin-top">
-          {/* Logo */}
-          <div className="relative z-40">
-            <Image src="/assets/asset_2.png" alt="Logo" width={300} height={90} />
-          </div>
-
-          {/* Navigation buttons */}
-          <div className="mt-4 z-40 flex flex-wrap justify-center gap-4">
-            <Image src="/assets/asset_3.png" alt="Buy $DILDO" width={160} height={44} />
-            <Image src="/assets/asset_4.png" alt="Community" width={160} height={44} />
-            <Image src="/assets/asset_5.png" alt="NFT" width={160} height={44} />
-            <Image src="/assets/asset_6.png" alt="Dildo Shop" width={160} height={44} />
-          </div>
-
-          {/* Central image with frame */}
-          <div className="mt-10 z-40 mx-auto">
-            <div className="border-[6px] border-[#00FF00]">
-              <Image src="/assets/asset_7.png" alt="Central Image" width={880} height={520} />
-            </div>
-          </div>
-
-          {/* Left dildo */}
-          <div className="mt-6">
-            <Image src="/assets/asset_8.png" alt="Left Dildo" width={288} height={552} />
-          </div>
-
-          {/* Right dildo */}
-          <div className="mt-6">
-            <Image src="/assets/asset_9.png" alt="Right Dildo" width={288} height={552} />
-          </div>
-        </div>
-      </div>
-
-      {/* DESKTOP layout */}
-      <div className="hidden md:block">
+      {/* Wrapper cu scalare pentru mobil */}
+      <div className="mx-auto w-full max-w-[1440px] relative origin-top scale-[0.95] md:scale-100">
         {/* Background pixel grid */}
-        <div className="absolute top-[220px] left-1/2 transform -translate-x-1/2 w-full max-w-[1440px] h-[500px] z-10">
+        <div className="absolute top-[220px] left-1/2 transform -translate-x-1/2 w-full h-[500px] z-10">
           <Image
             src="/assets/asset_1.png"
             alt="Green Background"
