@@ -14,7 +14,7 @@ export default function Hero() {
         />
       </div>
 
-      {/* Symbol background overlay (brighter & smaller) */}
+      {/* Symbol background overlay */}
       <Image
         src="/assets/asset_10.png"
         alt="Symbol Overlay"
@@ -37,7 +37,7 @@ export default function Hero() {
         <Image src="/assets/asset_2.png" alt="Logo" width={300} height={90} />
       </div>
 
-      {/* Navigation buttons - larger and lower */}
+      {/* Navigation buttons */}
       <div className="absolute top-[170px] left-1/2 transform -translate-x-1/2 z-40 flex flex-wrap justify-center gap-4">
         <Image src="/assets/asset_3.png" alt="Buy $DILDO" width={160} height={44} />
         <Image src="/assets/asset_4.png" alt="Community" width={160} height={44} />
@@ -45,7 +45,7 @@ export default function Hero() {
         <Image src="/assets/asset_6.png" alt="Dildo Shop" width={160} height={44} />
       </div>
 
-      {/* Center image in bordered frame - larger */}
+      {/* Central image with frame */}
       <div className="absolute top-[280px] left-1/2 transform -translate-x-1/2 z-40">
         <div className="border-[6px] border-[#00FF00]">
           <Image
@@ -57,20 +57,22 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Characters left & right adjusted for layout */}
+      {/* Left dildo - under central image */}
       <Image
         src="/assets/asset_8.png"
         alt="Left Dildo"
         width={240}
         height={460}
-        className="absolute bottom-[60px] left-[100px] z-30"
+        className="absolute bottom-[80px] left-[calc(50%-500px)] z-30"
       />
+
+      {/* Right dildo - over central image */}
       <Image
         src="/assets/asset_9.png"
         alt="Right Dildo"
         width={240}
         height={460}
-        className="absolute bottom-[60px] right-[60px] z-50"
+        className="absolute bottom-[80px] right-[calc(50%-500px)] z-50"
       />
     </section>
   );
