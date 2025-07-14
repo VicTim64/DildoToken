@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 const memes = [
-  "asset_32.png",
-  "asset_33.png",
-  "asset_34.png",
-  "asset_35.png",
-  "asset_36.png",
-  "asset_37.png"
+  "asset_27.png",
+  "asset_28.png",
+  "asset_29.png",
+  "asset_30.png",
+  "asset_31.png",
+  "asset_32.png"
 ];
 
 export default function Memes() {
@@ -15,7 +15,7 @@ export default function Memes() {
       <div className="max-w-6xl mx-auto text-center space-y-8">
         {/* Titlu */}
         <Image
-          src="/assets/asset_31.png"
+          src="/assets/asset_26.png"
           alt="Dildo Community Memes"
           width={400}
           height={80}

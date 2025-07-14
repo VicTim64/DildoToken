@@ -3,43 +3,32 @@ import Image from "next/image";
 export default function GoGreen() {
   return (
     <section className="py-20 px-6 bg-[#013220] text-white">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-        {/* Stânga: Titlu + Text */}
-        <div className="flex-1 space-y-6">
-          <Image
-            src="/assets/asset_11.png"
-            alt="Go Green or Go Home"
-            width={500}
-            height={120}
-          />
-          <Image
-            src="/assets/asset_19.png"
-            alt="Trenches quote"
-            width={500}
-            height={120}
-          />
-        </div>
+      <div className="max-w-6xl mx-auto text-center space-y-12">
+        {/* Titlu Go Green */}
+        <Image
+          src="/assets/asset_10.png"
+          alt="Go Green Title"
+          width={600}
+          height={100}
+          className="mx-auto"
+        />
 
-        {/* Dreapta: Imagini meme */}
-        <div className="flex-1 grid grid-cols-2 gap-4">
-          {[
-            "asset_12.png",
-            "asset_13.png",
-            "asset_14.png",
-            "asset_15.png",
-            "asset_16.png",
-            "asset_17.png",
-            "asset_18.png",
-          ].map((img, index) => (
-            <Image
-              key={index}
-              src={`/assets/${img}`}
-              alt={`Meme ${index + 1}`}
-              width={200}
-              height={200}
-              className="rounded-xl"
-            />
-          ))}
+        {/* Text motivational */}
+        <Image
+          src="/assets/asset_11.png"
+          alt="Trenches Quote"
+          width={700}
+          height={80}
+          className="mx-auto"
+        />
+
+        {/* Meme row */}
+        <div className="flex flex-wrap justify-center gap-6">
+          <Image src="/assets/asset_12.png" alt="Meme 1" width={200} height={200} />
+          <Image src="/assets/asset_13.png" alt="Meme 2" width={200} height={200} />
+          <Image src="/assets/asset_14.png" alt="Meme 3" width={200} height={200} />
+          <Image src="/assets/asset_15.png" alt="Meme 4" width={200} height={200} />
+          <Image src="/assets/asset_16.png" alt="Meme 5" width={200} height={200} />
         </div>
       </div>
     </section>
