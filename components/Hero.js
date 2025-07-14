@@ -34,7 +34,12 @@ export default function Hero() {
 
       {/* Logo */}
       <div className="absolute top-[30px] left-1/2 transform -translate-x-1/2 z-40">
-        <Image src="/assets/asset_2.png" alt="Logo" width={300} height={90} />
+        <Image
+          src="/assets/asset_2.png"
+          alt="Logo"
+          width={300}
+          height={90}
+        />
       </div>
 
       {/* Navigation buttons */}
@@ -57,23 +62,28 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Left dildo - under central image */}
+      {/* Left and Right dildos - responsive positioning */}
+      {/* Desktop view */}
       <Image
         src="/assets/asset_8.png"
         alt="Left Dildo"
         width={288}
         height={552}
-        className="absolute bottom-[80px] left-[calc(50%-550px)] z-30"
+        className="hidden md:block absolute bottom-[80px] left-[calc(50%-550px)] z-30"
       />
-
-      {/* Right dildo - over central image */}
       <Image
         src="/assets/asset_9.png"
         alt="Right Dildo"
         width={288}
         height={552}
-        className="absolute bottom-[80px] right-[calc(50%-550px)] z-50"
+        className="hidden md:block absolute bottom-[80px] right-[calc(50%-550px)] z-50"
       />
+
+      {/* Mobile view - scaled down and in same relative line */}
+      <div className="md:hidden absolute top-[860px] left-1/2 transform -translate-x-1/2 z-40 flex justify-between w-[320px]">
+        <Image src="/assets/asset_8.png" alt="Left Dildo" width={100} height={192} />
+        <Image src="/assets/asset_9.png" alt="Right Dildo" width={100} height={192} />
+      </div>
     </section>
   );
 }
