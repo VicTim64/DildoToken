@@ -61,18 +61,18 @@ export default function Hero() {
       <Image
         src="/assets/asset_8.png"
         alt="Left Dildo"
-        width={240}
-        height={460}
-        className="absolute bottom-[80px] left-[calc(50%-500px)] z-30"
+        width={288}
+        height={552}
+        className="absolute bottom-[80px] left-[calc(50%-550px)] z-30"
       />
 
       {/* Right dildo - over central image */}
       <Image
         src="/assets/asset_9.png"
         alt="Right Dildo"
-        width={240}
-        height={460}
-        className="absolute bottom-[80px] right-[calc(50%-500px)] z-50"
+        width={288}
+        height={552}
+        className="absolute bottom-[80px] right-[calc(50%-550px)] z-50"
       />
     </section>
   );
