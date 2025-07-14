@@ -1,12 +1,38 @@
+"use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function Hero() {
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    function handleResize() {
+      const w = window.innerWidth;
+      if (w < 768) {
+        setScale(w / 1440); // scalare proporțională pt mobil
+      } else {
+        setScale(1); // full scale pe desktop
+      }
+    }
+
+    handleResize(); // run initial
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="relative w-full min-h-screen bg-[#021a0f] overflow-hidden px-4 pb-12">
-      {/* Wrapper cu scalare pentru mobil */}
-      <div className="mx-auto w-full max-w-[1440px] relative origin-top scale-[0.95] md:scale-100">
+      <div
+        className="origin-top mx-auto"
+        style={{
+          transform: `scale(${scale})`,
+          transformOrigin: "top center",
+          width: "1440px",
+        }}
+      >
         {/* Background pixel grid */}
-        <div className="absolute top-[220px] left-1/2 transform -translate-x-1/2 w-full h-[500px] z-10">
+        <div className="absolute top-[220px] left-1/2 transform -translate-x-1/2 w-full max-w-[1440px] h-[500px] z-10">
           <Image
             src="/assets/asset_1.png"
             alt="Green Background"
@@ -36,21 +62,51 @@ export default function Hero() {
 
         {/* Logo */}
         <div className="absolute top-[30px] left-1/2 transform -translate-x-1/2 z-40">
-          <Image src="/assets/asset_2.png" alt="Logo" width={300} height={90} />
+          <Image
+            src="/assets/asset_2.png"
+            alt="Logo"
+            width={300}
+            height={90}
+          />
         </div>
 
         {/* Navigation buttons */}
         <div className="absolute top-[170px] left-1/2 transform -translate-x-1/2 z-40 flex flex-wrap justify-center gap-4">
-          <Image src="/assets/asset_3.png" alt="Buy $DILDO" width={160} height={44} />
-          <Image src="/assets/asset_4.png" alt="Community" width={160} height={44} />
-          <Image src="/assets/asset_5.png" alt="NFT" width={160} height={44} />
-          <Image src="/assets/asset_6.png" alt="Dildo Shop" width={160} height={44} />
+          <Image
+            src="/assets/asset_3.png"
+            alt="Buy $DILDO"
+            width={160}
+            height={44}
+          />
+          <Image
+            src="/assets/asset_4.png"
+            alt="Community"
+            width={160}
+            height={44}
+          />
+          <Image
+            src="/assets/asset_5.png"
+            alt="NFT"
+            width={160}
+            height={44}
+          />
+          <Image
+            src="/assets/asset_6.png"
+            alt="Dildo Shop"
+            width={160}
+            height={44}
+          />
         </div>
 
         {/* Central image with frame */}
         <div className="absolute top-[280px] left-1/2 transform -translate-x-1/2 z-40">
           <div className="border-[6px] border-[#00FF00]">
-            <Image src="/assets/asset_7.png" alt="Central Image" width={880} height={520} />
+            <Image
+              src="/assets/asset_7.png"
+              alt="Central Image"
+              width={880}
+              height={520}
+            />
           </div>
         </div>
 
