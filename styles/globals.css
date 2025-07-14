@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* Optional - scroll smooth, font custom, background default */
+html {
+  scroll-behavior: smooth;
   background-color: #013220;
-  color: white;
-  font-family: 'Arial', sans-serif;
 }

@@ -1,19 +1,22 @@
-import Head from "next/head";
+import Hero from "@/components/Hero";
+import GoGreen from "@/components/GoGreen";
+import NFTSection from "@/components/NFTSection";
+import Store from "@/components/Store";
+import Memes from "@/components/Memes";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Dildo Token</title>
-      </Head>
-      <main className="min-h-screen bg-[#013220] text-white p-6 space-y-10">
-        <h1 className="text-2xl font-bold">Navbar</h1>
-        <h2 className="text-xl">Hero Section</h2>
-        <h2 className="text-xl">Go Green or Go Home</h2>
-        <h2 className="text-xl">Join the Movement</h2>
-        <h2 className="text-xl">Dildo Store - COMING SOON</h2>
-        <h2 className="text-xl">Community Memes</h2>
-        <h2 className="text-xl">Join Community</h2>
+      <main className="bg-[#013220] text-white min-h-screen">
+        <Hero />
+        {/* Urmează și celelalte componente */}
+
+        <GoGreen />
+        <NFTSection />
+        <Store />
+        <Memes />
+        <Footer />
       </main>
     </>
   );
