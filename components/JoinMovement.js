@@ -1,0 +1,1 @@
+export default function JoinMovement() { return <section className='p-4'>Join the Movement</section>; }

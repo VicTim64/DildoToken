@@ -1,0 +1,1 @@
+export default function DildoStore() { return <section className='p-4'>Dildo Store - COMING SOON</section>; }
