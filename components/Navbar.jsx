@@ -1,4 +1,3 @@
-
 export default function Navbar() {
   return (
     <nav className="bg-green-900 text-white p-4">

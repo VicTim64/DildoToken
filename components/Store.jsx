@@ -1,4 +1,3 @@
-
 const products = [
   { image: "/assets/store1.png", title: "Green Dildo Cap", link: "https://dildoshop.com/item1" },
   { image: "/assets/store2.png", title: "Monster Dildo Tee", link: "https://dildoshop.com/item2" },

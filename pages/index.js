@@ -1,14 +1,17 @@
-import Head from 'next/head'
+import Navbar from '../components/Navbar'
+import Hero from '../components/Hero'
+import Store from '../components/Store'
+import MemeSlider from '../components/MemeSlider'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>DILDO TOKEN</title>
-      </Head>
-      <main className="min-h-screen bg-black text-white flex items-center justify-center">
-        <h1 className="text-5xl font-bold">DILDO TOKEN IS LIVE</h1>
-      </main>
+      <Navbar />
+      <Hero />
+      <Store />
+      <MemeSlider />
+      <Footer />
     </>
   )
 }

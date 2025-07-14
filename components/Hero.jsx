@@ -1,4 +1,3 @@
-
 export default function Hero() {
   return (
     <section className="bg-green-800 text-white text-center py-20">
