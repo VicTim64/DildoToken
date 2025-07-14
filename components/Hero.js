@@ -20,7 +20,7 @@ export default function Hero() {
         alt="Symbol Overlay"
         width={460}
         height={460}
-        className="absolute top-[60px] right-[60px] z-20 opacity-100 brightness-[1.3]"
+        className="absolute top-[100px] right-[60px] z-30 opacity-100 brightness-[1.4]"
       />
 
       {/* Corner icon */}
@@ -33,42 +33,42 @@ export default function Hero() {
       />
 
       {/* Logo */}
-      <div className="absolute top-[20px] left-1/2 transform -translate-x-1/2 z-40">
+      <div className="absolute top-[40px] left-1/2 transform -translate-x-1/2 z-40">
         <Image src="/assets/asset_2.png" alt="Logo" width={480} height={120} />
       </div>
 
       {/* Navigation buttons */}
-      <div className="absolute top-[100px] left-1/2 transform -translate-x-1/2 z-40 flex flex-wrap justify-center gap-2">
-        <Image src="/assets/asset_3.png" alt="Buy $DILDO" width={120} height={36} />
-        <Image src="/assets/asset_4.png" alt="Community" width={120} height={36} />
-        <Image src="/assets/asset_5.png" alt="NFT" width={120} height={36} />
-        <Image src="/assets/asset_6.png" alt="Dildo Shop" width={120} height={36} />
+      <div className="absolute top-[120px] left-1/2 transform -translate-x-1/2 z-40 flex flex-wrap justify-center gap-2">
+        <Image src="/assets/asset_3.png" alt="Buy $DILDO" width={100} height={30} />
+        <Image src="/assets/asset_4.png" alt="Community" width={100} height={30} />
+        <Image src="/assets/asset_5.png" alt="NFT" width={100} height={30} />
+        <Image src="/assets/asset_6.png" alt="Dildo Shop" width={100} height={30} />
       </div>
 
       {/* Characters left & right */}
       <Image
         src="/assets/asset_8.png"
         alt="Left Dildo"
-        width={260}
-        height={460}
-        className="absolute bottom-0 left-0 z-30"
+        width={200}
+        height={400}
+        className="absolute bottom-0 left-0 z-20"
       />
       <Image
         src="/assets/asset_9.png"
         alt="Right Dildo"
-        width={260}
-        height={460}
+        width={200}
+        height={400}
         className="absolute bottom-0 right-0 z-50"
       />
 
       {/* Center image in bordered frame */}
-      <div className="relative z-40 flex justify-center mt-[160px]">
+      <div className="relative z-40 flex justify-center mt-[100px]">
         <div className="border-[6px] border-[#00FF00]">
           <Image
             src="/assets/asset_7.png"
             alt="Central Image"
-            width={640}
-            height={384}
+            width={560}
+            height={336}
           />
         </div>
       </div>
