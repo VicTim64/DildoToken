@@ -1,1 +1,0 @@
-export default function JoinMovement() { return <section>Join Movement</section>; }
